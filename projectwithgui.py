@@ -70,7 +70,7 @@ class Form(QMainWindow, QDialog) :
         """"""""""""""""tab1"""""""""""""""
         
         pic1 = QLabel(self)
-        picCT = QPixmap('ctob.PNG')
+        picCT = QPixmap('ct.png')
         pic1.setPixmap(picCT)
         
         self.ctrbA = QLineEdit("[[-3,-2],[1,0]]")
@@ -101,25 +101,25 @@ class Form(QMainWindow, QDialog) :
         self.tab1.layout = QGridLayout(self)
         
         """inputs"""
-        self.tab1.layout.addWidget(pic1,0,3)       
+        self.tab1.layout.addWidget(pic1,0,2,11,1)       
         
-        self.tab1.layout.addWidget(self.labelIn,5,0)  
-        self.tab1.layout.addWidget(self.labelOut,5,2) 
-        self.tab1.layout.addWidget(self.labelA,6,0) 
-        self.tab1.layout.addWidget(self.ctrbA,6,1)  
+        self.tab1.layout.addWidget(self.labelIn,0,0)  
+        self.tab1.layout.addWidget(self.labelOut,4,0) 
+        self.tab1.layout.addWidget(self.labelA,1,0) 
+        self.tab1.layout.addWidget(self.ctrbA,1,1)  
 
-        self.tab1.layout.addWidget(self.labelB,7,0)        
-        self.tab1.layout.addWidget(self.ctrbB,7,1) 
+        self.tab1.layout.addWidget(self.labelB,2,0)        
+        self.tab1.layout.addWidget(self.ctrbB,2,1) 
         
-        self.tab1.layout.addWidget(self.labelC,8,0)        
-        self.tab1.layout.addWidget(self.ctrbC,8,1)
+        self.tab1.layout.addWidget(self.labelC,3,0)        
+        self.tab1.layout.addWidget(self.ctrbC,3,1)
         
         """outputs"""
-        self.tab1.layout.addWidget(self.labelCtrb,6,2) 
-        self.tab1.layout.addWidget(self.outputC,6,3)
+        self.tab1.layout.addWidget(self.labelCtrb,5,0) 
+        self.tab1.layout.addWidget(self.outputC,5,1)
         
-        self.tab1.layout.addWidget(self.labelObsv,7,2) 
-        self.tab1.layout.addWidget(self.outputO,7,3)
+        self.tab1.layout.addWidget(self.labelObsv,6,0) 
+        self.tab1.layout.addWidget(self.outputO,6,1)
         
         self.tab1.setLayout(self.tab1.layout)
                 
@@ -127,7 +127,7 @@ class Form(QMainWindow, QDialog) :
         layout = QVBoxLayout() 
 #        layout.addWidget(self.tabs)
                 
-        self.tab1.layout.addWidget(self.push1)
+        self.tab1.layout.addWidget(self.push1,8,1)
         
         """"""""""""""""""""""""""""""
         """"""""""""""""""""""""""""""
@@ -137,7 +137,7 @@ class Form(QMainWindow, QDialog) :
         """"""""""""""""tab2"""""""""""""""
         
         pic2 = QLabel(self)
-        picFSO = QPixmap('fullstate.PNG')
+        picFSO = QPixmap('full.png')
         pic2.setPixmap(picFSO)
         
         self.dF = QLineEdit("[[-1,-2,-2],[0,-1,1],[1,0,-1]]")
@@ -158,7 +158,7 @@ class Form(QMainWindow, QDialog) :
         self.dintegral.selectAll()
         self.dPO.selectAll()
         
-        self.dAm = QTextEdit("")
+        self.dAm = QLineEdit("")
         self.dAm.selectAll()
         self.dBm = QLineEdit("")
         self.dBm.selectAll()
@@ -194,54 +194,54 @@ class Form(QMainWindow, QDialog) :
         
         
         """inputs"""
-        self.tab2.layout.addWidget(pic2,0,3)       
+        self.tab2.layout.addWidget(pic2,7,3,2,3)       
         
-        self.tab2.layout.addWidget(self.labelIn2,5,0)  
-        self.tab2.layout.addWidget(self.labelOut2,5,2)
+        self.tab2.layout.addWidget(self.labelIn2,0,0)  
+        self.tab2.layout.addWidget(self.labelOut2,0,2)
         
-        self.tab2.layout.addWidget(self.labeldF,6,0) 
-        self.tab2.layout.addWidget(self.dF,6,1)  
+        self.tab2.layout.addWidget(self.labeldF,1,0) 
+        self.tab2.layout.addWidget(self.dF,1,1)  
 
-        self.tab2.layout.addWidget(self.labeldG,7,0)        
-        self.tab2.layout.addWidget(self.dG,7,1) 
+        self.tab2.layout.addWidget(self.labeldG,2,0)        
+        self.tab2.layout.addWidget(self.dG,2,1) 
         
-        self.tab2.layout.addWidget(self.labeldH,8,0)        
-        self.tab2.layout.addWidget(self.dH,8,1)
+        self.tab2.layout.addWidget(self.labeldH,3,0)        
+        self.tab2.layout.addWidget(self.dH,3,1)
         
-        self.tab2.layout.addWidget(self.labeldJ,9,0)        
-        self.tab2.layout.addWidget(self.dJ,9,1)
+        self.tab2.layout.addWidget(self.labeldJ,4,0)        
+        self.tab2.layout.addWidget(self.dJ,4,1)
         
-        self.tab2.layout.addWidget(self.labeldos,10,0)        
-        self.tab2.layout.addWidget(self.dos,10,1)
+        self.tab2.layout.addWidget(self.labeldos,5,0)        
+        self.tab2.layout.addWidget(self.dos,5,1)
         
-        self.tab2.layout.addWidget(self.labeldts,11,0)        
-        self.tab2.layout.addWidget(self.dts,11,1)
+        self.tab2.layout.addWidget(self.labeldts,6,0)        
+        self.tab2.layout.addWidget(self.dts,6,1)
         
-        self.tab2.layout.addWidget(self.labeldintegral,12,0)        
-        self.tab2.layout.addWidget(self.dintegral,12,1)
+        self.tab2.layout.addWidget(self.labeldintegral,7,0)        
+        self.tab2.layout.addWidget(self.dintegral,7,1)
         
-        self.tab2.layout.addWidget(self.labeldPO,13,0)        
-        self.tab2.layout.addWidget(self.dPO,13,1)
+        self.tab2.layout.addWidget(self.labeldPO,8,0)        
+        self.tab2.layout.addWidget(self.dPO,8,1)
         
         """outputs"""
-        self.tab2.layout.addWidget(self.labeldAm,6,2,3,2) 
-        self.tab2.layout.addWidget(self.dAm,6,3)
+        self.tab2.layout.addWidget(self.labeldAm,1,2) 
+        self.tab2.layout.addWidget(self.dAm,1,3)
         
-        self.tab2.layout.addWidget(self.labeldBm,7,2) 
-        self.tab2.layout.addWidget(self.dBm,7,3)
+        self.tab2.layout.addWidget(self.labeldBm,2,2) 
+        self.tab2.layout.addWidget(self.dBm,2,3)
         
-        self.tab2.layout.addWidget(self.labeldCm,8,2) 
-        self.tab2.layout.addWidget(self.dCm,8,3)
+        self.tab2.layout.addWidget(self.labeldCm,3,2) 
+        self.tab2.layout.addWidget(self.dCm,3,3)
         
-        self.tab2.layout.addWidget(self.labeldDm,9,2) 
-        self.tab2.layout.addWidget(self.dDm,9,3)
+        self.tab2.layout.addWidget(self.labeldDm,4,2) 
+        self.tab2.layout.addWidget(self.dDm,4,3)
         
         self.tab2.setLayout(self.tab2.layout)
                 
         
 #        layout = QVBoxLayout() 
                 
-        self.tab2.layout.addWidget(self.push2)
+        self.tab2.layout.addWidget(self.push2,5,3)
         
         
         """"""""""""""""""""""""""""""
